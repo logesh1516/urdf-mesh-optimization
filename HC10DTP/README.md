@@ -37,7 +37,7 @@ They were optimized through:
 ---
 
 # Mesh Size Comparison
-
+![HC10DTP-B00](../Images/hc10dtp.png)
 ## Unoptimized Meshes (CAD Export)
 
 
@@ -95,7 +95,7 @@ Total ≈ **92 KB**
 |------------------------------- |------------- |------------ |-----------|
 |Visual Mesh Triangles           |504,002       |16,192      | \~96.79%|
 |Collision Mesh Triangles      |504,002       |1,724       | \~99.66%|
-|**Total Optimized Triangles**   |508,360       |**17916** |  \~98.22%|
+|**Total Optimized Triangles**   |504,002       |**17916** |  \~98.22%|
 
 
 - The mesh optimization reduced **visual mesh complexity by \~96.79%** and **collision mesh complexity by \~99.66%**, significantly improving performance for robotics simulation and motion planning

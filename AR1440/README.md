@@ -37,7 +37,7 @@ They were optimized through:
 ---
 
 # Mesh Size Comparison
-
+![AR1440](../Images/ar1440.png)
 ## Unoptimized Meshes (CAD Export)
 
 
