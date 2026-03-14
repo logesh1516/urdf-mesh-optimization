@@ -1,0 +1,177 @@
+<robot name="HC10DTP-B00" version="1.0">
+  <joint name="joint_1" type="revolute">
+    <limit effort="1.000" lower="-3.662" upper="3.662" velocity="0.000"></limit>
+    <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.117"></origin>
+    <parent link="base_link"></parent>
+    <child link="linik_1"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <limit effort="1.000" lower="-3.1416" upper="3.1416" velocity="0.000"></limit>
+    <origin rpy="-1.571 0.000 0.000" xyz="-0.000 -0.158 0.158"></origin>
+    <parent link="linik_1"></parent>
+    <child link="link_2"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <limit effort="1.000" lower="-5.0615" upper="5.061" velocity="0.000"></limit>
+    <origin rpy="-3.142 0.000 0.000" xyz="0.000 -0.700 0.018"></origin>
+    <parent link="link_2"></parent>
+    <child link="link_3"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <limit effort="1.000" lower="-3.6652" upper="3.6652" velocity="0.000"></limit>
+    <origin rpy="-3.142 1.571 0.000" xyz="0.136 0.000 -0.140"></origin>
+    <parent link="link_3"></parent>
+    <child link="link_4"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <limit effort="1.000" lower="-3.142" upper="3.142" velocity="0.000"></limit>
+    <origin rpy="0.000 1.571 0.000" xyz="0.035 -0.000 -0.364"></origin>
+    <parent link="link_4"></parent>
+    <child link="link_5"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <limit effort="1.000" lower="-3.6652" upper="3.6652" velocity="0.000"></limit>
+    <origin rpy="3.142 -1.571 0.000" xyz="0.062 0.000 0.127"></origin>
+    <parent link="link_5"></parent>
+    <child link="link_6"></child>
+    <axis xyz="0.000 0.000 -1.000"></axis>
+  </joint>
+  <link name="base_link">
+    <collision name="base_link_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/base_link_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.042" ixy="-0.002" ixz="-0.007" iyy="0.067" iyz="-0.001" izz="0.078"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="-0.012 0.000 0.067"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/base_link_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="linik_1">
+    <collision name="linik_1_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_1_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.064" ixy="-0.000" ixz="-0.000" iyy="0.051" iyz="0.005" izz="0.051"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 -0.027 0.131"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_1_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_2">
+    <collision name="link_2_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_2_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.614" ixy="-0.000" ixz="-0.000" iyy="0.026" iyz="0.013" izz="0.608"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 -0.317 -0.025"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_2_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_3">
+    <collision name="link_3_collision">
+      <origin rpy="-0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_3_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.040" ixy="-0.002" ixz="0.003" iyy="0.046" iyz="-0.001" izz="0.037"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="0.018 -0.007 -0.114"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_3_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_4">
+    <collision name="link_4_collision">
+      <origin rpy="-0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_4_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.153" ixy="0.000" ixz="0.002" iyy="0.159" iyz="-0.000" izz="0.017"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="0.002 0.000 -0.198"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.000 0.000 0.000" xyz="0.000 0.000 0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_4_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_5">
+    <collision name="link_5_collision">
+      <origin rpy="-0.000 0.000 -0.000" xyz="0.000 0.000 -0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_5_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.029" ixy="-0.000" ixz="0.004" iyy="0.042" iyz="0.000" izz="0.034"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="-0.018 0.000 0.111"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.000 0.000 -0.000" xyz="0.000 0.000 -0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_5_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_6">
+    <collision name="link_6_collision">
+      <origin rpy="-0.000 -0.000 0.000" xyz="0.000 0.000 -0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/collision/link_6_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.016" ixy="0.000" ixz="0.001" iyy="0.019" iyz="0.000" izz="0.014"></inertia>
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 -0.001 0.046"></origin>
+      <mass value="8.200"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.000 -0.000 0.000" xyz="0.000 0.000 -0.000"></origin>
+      <geometry>
+        <mesh filename="package://hc10_description/meshes/visual/link_6_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+</robot>

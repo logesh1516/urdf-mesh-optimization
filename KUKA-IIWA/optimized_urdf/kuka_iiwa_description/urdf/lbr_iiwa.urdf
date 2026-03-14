@@ -1,0 +1,227 @@
+<robot name="lbr_iiwa" version="1.0">
+  <joint name="lbr_iiwa_joint_1" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.96706" upper="2.96706" velocity="10"></limit>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.15750"></origin>
+    <parent link="base_link"></parent>
+    <child link="link_1"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_2" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.09440" upper="2.09440" velocity="10"></limit>
+    <origin rpy="1.57080 0.00000 3.14159" xyz="0.00000 0.00000 0.20250"></origin>
+    <parent link="link_1"></parent>
+    <child link="link_2"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_3" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.96706" upper="2.96706" velocity="10"></limit>
+    <origin rpy="1.57080 0.00000 -3.14159" xyz="0.00000 0.20450 -0.00000"></origin>
+    <parent link="link_2"></parent>
+    <child link="link_3"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_4" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.09440" upper="2.09440" velocity="10"></limit>
+    <origin rpy="1.57080 -0.00000 0.00000" xyz="0.00000 -0.00000 0.21550"></origin>
+    <parent link="link_3"></parent>
+    <child link="link_4"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_5" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.96706" upper="2.96706" velocity="10"></limit>
+    <origin rpy="1.57080 0.00000 3.14159" xyz="0.00000 0.18450 -0.00000"></origin>
+    <parent link="link_4"></parent>
+    <child link="link_5"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_6" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-2.09440" upper="2.09440" velocity="10"></limit>
+    <origin rpy="1.57080 -0.00000 -0.00000" xyz="-0.00000 -0.00000 0.21550"></origin>
+    <parent link="link_5"></parent>
+    <child link="link_6"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <joint name="lbr_iiwa_joint_7" type="revolute">
+    <dynamics damping="0.50000"></dynamics>
+    <limit effort="300" lower="-3.05433" upper="3.05433" velocity="10"></limit>
+    <origin rpy="1.57080 -0.00000 3.14159" xyz="-0.00000 0.08100 -0.00000"></origin>
+    <parent link="link_6"></parent>
+    <child link="link_7"></child>
+    <axis xyz="0.00000 0.00000 1.00000"></axis>
+  </joint>
+  <link name="base_link">
+    <collision name="base_link_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/base_link_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.05000" ixy="0.00000" ixz="0.00000" iyy="0.06000" iyz="0.00000" izz="0.03000"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.10000 0.00000 0.07000"></origin>
+      <mass value="0.00000"></mass>
+    </inertial>
+    <visual name="base_link_visual">
+      <material name="Grey"></material>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/base_link_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_1">
+    <collision name="link_1_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_1_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.10000" ixy="0.00000" ixz="0.00000" iyy="0.09000" iyz="0.00000" izz="0.02000"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.03000 0.12000"></origin>
+      <mass value="4"></mass>
+    </inertial>
+    <visual name="link_1_visual">
+      <material name="Blue"></material>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_1_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_2">
+    <collision name="link_2_collision">
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_2_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.05000" ixy="-0.00000" ixz="-0.00000" iyy="0.01800" iyz="-0.00000" izz="0.04400"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00030 0.05900 0.04200"></origin>
+      <mass value="4"></mass>
+    </inertial>
+    <visual name="link_2_visual">
+      <material name="Blue"></material>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_2_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_3">
+    <collision name="link_3_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_3_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.08000" ixy="-0.00000" ixz="0.00000" iyy="0.07500" iyz="-0.00000" izz="0.01000"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.03000 0.13000"></origin>
+      <mass value="3"></mass>
+    </inertial>
+    <visual name="link_3_visual">
+      <material name="Orange"></material>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_3_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_4">
+    <collision name="link_4_collision">
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_4_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.03000" ixy="0.00000" ixz="-0.00000" iyy="0.01000" iyz="-0.00000" izz="0.02900"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.06700 0.03400"></origin>
+      <mass value="2.70000"></mass>
+    </inertial>
+    <visual name="link_4_visual">
+      <material name="Blue"></material>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_4_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_5">
+    <collision name="link_5_collision">
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_5_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.02000" ixy="0.00000" ixz="-0.00000" iyy="0.01800" iyz="-0.00000" izz="0.00500"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00010 0.02100 0.07600"></origin>
+      <mass value="1.70000"></mass>
+    </inertial>
+    <visual name="link_5_visual">
+      <material name="Blue"></material>
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_5_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_6">
+    <collision name="link_6_collision">
+      <origin rpy="-0.00000 -0.00000 0.00000" xyz="-0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_6_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00500" ixy="-0.00000" ixz="-0.00000" iyy="0.00360" iyz="-0.00000" izz="0.00470"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00060 0.00040"></origin>
+      <mass value="1.80000"></mass>
+    </inertial>
+    <visual name="link_6_visual">
+      <material name="Orange"></material>
+      <origin rpy="-0.00000 -0.00000 0.00000" xyz="-0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_6_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_7">
+    <collision name="link_7_collision">
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/collision/link_7_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 0.02000"></origin>
+      <mass value="0.30000"></mass>
+    </inertial>
+    <visual name="link_7_visual">
+      <material name="Grey"></material>
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://kuka_iiwa_description/meshes/visual/link_7_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <material name="Blue">
+    <color rgba="0.49804 0.69804 1.00000 1.00000"></color>
+  </material>
+  <material name="Grey">
+    <color rgba="0.20000 0.20000 0.20000 1.00000"></color>
+  </material>
+  <material name="Orange">
+    <color rgba="1.00000 0.42353 0.03529 1.00000"></color>
+  </material>
+</robot>

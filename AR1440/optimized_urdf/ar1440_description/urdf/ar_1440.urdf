@@ -1,0 +1,177 @@
+<robot name="ar_1440" version="1.0">
+  <joint name="joint_1" type="revolute">
+    <limit effort="1.00000" lower="-2.967" upper="2.967" velocity="0.00000"></limit>
+    <origin rpy="-3.14159 0.00000 0.00000" xyz="0.05024 -0.00009 0.08608"></origin>
+    <parent link="base_link"></parent>
+    <child link="link_1_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <limit effort="1.00000" lower="-1.571" upper="2.705" velocity="0.00000"></limit>
+    <origin rpy="1.57080 0.00000 0.00000" xyz="0.15500 0.03950 -0.28500"></origin>
+    <parent link="link_1_1"></parent>
+    <child link="link_2_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <limit effort="1.00000" lower="-1.483" upper="2.444" velocity="0.00000"></limit>
+    <origin rpy="3.14159 -0.00000 -1.57080" xyz="0.00000 -0.61400 -0.00950"></origin>
+    <parent link="link_2_1"></parent>
+    <child link="link_3_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <limit effort="1.00000" lower="-2.618" upper="2.618" velocity="0.00000"></limit>
+    <origin rpy="1.79189 1.57080 -1.34970" xyz="0.26500 0.20000 -0.04900"></origin>
+    <parent link="link_3_1"></parent>
+    <child link="link_4_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <limit effort="1.00000" lower="-2.356" upper="1.571" velocity="0.00000"></limit>
+    <origin rpy="-1.57080 0.00000 1.57080" xyz="-0.06000 0.00000 -0.37500"></origin>
+    <parent link="link_4_1"></parent>
+    <child link="link_5_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <limit effort="1.00000" lower="-3.665" upper="3.665" velocity="0.00000"></limit>
+    <origin rpy="0.67198 1.57080 -2.46961" xyz="0.09400 0.00000 -0.06000"></origin>
+    <parent link="link_5_1"></parent>
+    <child link="link_6_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <link name="base_link">
+    <collision>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/base_link_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.08364" ixy="0.00097" ixz="-0.00342" iyy="0.17144" iyz="-0.00050" izz="0.21263"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.01145 0.00163 -0.00381"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/base_link_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_1_1">
+    <collision>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_1_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.14454" ixy="0.01151" ixz="0.04868" iyy="0.17770" iyz="-0.01555" izz="0.16793"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.03836 -0.00699 -0.11790"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_1_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_2_1">
+    <collision>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_2_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.42808" ixy="-0.00032" ixz="-0.00401" iyy="0.02592" iyz="-0.01371" izz="0.42953"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.02316 -0.27668 -0.06576"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_2_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_3_1">
+    <collision>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_3_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.13927" ixy="-0.06140" ixz="-0.02238" iyy="0.12956" iyz="-0.02743" izz="0.16756"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.09898 0.11354 -0.02334"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_3_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_4_1">
+    <collision>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_4_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.15561" ixy="0.00034" ixz="-0.00332" iyy="0.17434" iyz="0.00275" izz="0.03841"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00370 -0.01571 -0.18291"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_4_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_5_1">
+    <collision>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_5_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.02011" ixy="0.00009" ixz="0.00071" iyy="0.02681" iyz="-0.00030" izz="0.02241"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.03633 0.00067 -0.05900"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_5_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_6_1">
+    <collision>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/collision/link_6_collision.stl" scale="1 1 1"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00257" ixy="0.00000" ixz="0.00000" iyy="0.00244" iyz="-0.00000" izz="0.00497"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00036 -0.00299"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://ar1440_description/meshes/visual/link_6_visual.dae" scale="1 1 1"></mesh>
+      </geometry>
+    </visual>
+  </link>
+</robot>

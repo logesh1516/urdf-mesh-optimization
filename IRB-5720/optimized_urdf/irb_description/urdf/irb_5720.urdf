@@ -1,0 +1,180 @@
+<robot name="irb_5720" version="1.0">
+  <joint name="joint_1" type="revolute">
+    <limit effort="1.00000" lower="-2.96706" upper="2.96706" velocity="0.00000"></limit>
+    <origin rpy="-3.14159 0.00000 0.00000" xyz="0.13898 0.00078 0.10982"></origin>
+    <parent link="base_link"></parent>
+    <child link="link_1_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <limit effort="1.00000" lower="-1.30900" upper="2.53073" velocity="0.00000"></limit>
+    <origin rpy="-1.57080 0.00000 0.00000" xyz="0.32000 0.11300 -0.45500"></origin>
+    <parent link="link_1_1"></parent>
+    <child link="link_2_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <limit effort="1.00000" lower="-3.14159" upper="1.22173" velocity="0.00000"></limit>
+    <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 1.12000 0.12000"></origin>
+    <parent link="link_2_1"></parent>
+    <child link="link_3_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <limit effort="1.00000" lower="-5.23599" upper="5.23599" velocity="0.00000"></limit>
+    <origin rpy="-0.00000 1.57080 0.00000" xyz="0.08700 0.20000 -0.23300"></origin>
+    <parent link="link_3_1"></parent>
+    <child link="link_4_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <limit effort="1.00000" lower="-2.26893" upper="2.26893" velocity="0.00000"></limit>
+    <origin rpy="-3.14159 -1.57080 0.00000" xyz="0.08400 -0.00000 1.05750"></origin>
+    <parent link="link_4_1"></parent>
+    <child link="link_5_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <limit effort="1.00000" lower="-6.28319" upper="6.28319" velocity="0.00000"></limit>
+    <origin rpy="0.00000 -1.57080 0.00000" xyz="0.14700 -0.00000 -0.08400"></origin>
+    <parent link="link_5_1"></parent>
+    <child link="link_6_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <link name="base_link">
+    <collision name="Base_link_1_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/base_link_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.71066" ixy="-0.07078" ixz="0.06609" iyy="1.63753" iyz="0.00715" izz="2.21479"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00006 0.00007 0.00028"></origin>
+      <mass value="20.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/base_link_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_1_1">
+    <collision name="link_1_1_collision">
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_1_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.74993" ixy="0.04957" ixz="0.37849" iyy="1.29287" iyz="-0.04983" izz="0.95494"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.13908 -0.02123 -0.29046"></origin>
+      <mass value="20.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_1_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_2_1">
+    <collision name="link_2_1_collision">
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_2_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="1.47535" ixy="0.00735" ixz="0.00414" iyy="0.12425" iyz="-0.14105" izz="1.50417"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.01004 0.52048 0.12408"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_2_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_3_1">
+    <collision>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_3_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.27363" ixy="0.02321" ixz="-0.04342" iyy="0.29529" iyz="0.04999" izz="0.29228"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.05899 0.13875 -0.24064"></origin>
+      <mass value="10.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_3_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_4_1">
+    <collision name="link_4_1_collision">
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_4_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.56252" ixy="-0.00015" ixz="0.01663" iyy="0.58742" iyz="0.00140" izz="0.05530"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00696 -0.00005 0.66168"></origin>
+      <mass value="5.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_4_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_5_1">
+    <collision name="link_5_1_collision">
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_5_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.01947" ixy="-0.00213" ixz="-0.00218" iyy="0.05020" iyz="-0.00061" izz="0.05013"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.01388 0.00364 -0.08011"></origin>
+      <mass value="5.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_5_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_6_1">
+    <collision>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/collision/link_6_collision.stl" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00310" ixy="-0.00003" ixz="0.00001" iyy="0.00306" iyz="0.00001" izz="0.00580"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00002 -0.00006 -0.01392"></origin>
+      <mass value="2.00000"></mass>
+    </inertial>
+    <visual>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="package://irb_description/meshes/visual/link_6_visual.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <material name="base_material">
+    <color rgba="0.80000 0.80000 0.80000 1.00000"></color>
+  </material>
+</robot>

@@ -1,0 +1,187 @@
+<robot name="ar1440" version="1.0">
+  <joint name="joint_1" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="-3.14159 0.00000 0.00000" xyz="0.05024 -0.00009 0.08608"></origin>
+    <parent link="Base_link_1"></parent>
+    <child link="link_1_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="1.57080 0.00000 0.00000" xyz="0.15500 0.03950 -0.28500"></origin>
+    <parent link="link_1_1"></parent>
+    <child link="link_2_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="3.14159 -0.00001 -1.57079" xyz="-0.00000 -0.61400 -0.00950"></origin>
+    <parent link="link_2_1"></parent>
+    <child link="link_3_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="-1.34285 1.57079 1.79874" xyz="0.26500 0.20000 -0.04900"></origin>
+    <parent link="link_3_1"></parent>
+    <child link="link_4_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="-1.57080 -0.00000 1.57080" xyz="-0.06000 0.00000 -0.37500"></origin>
+    <parent link="link_4_1"></parent>
+    <child link="link_5_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <limit effort="1" lower="-6.28319" upper="6.28319" velocity="1"></limit>
+    <origin rpy="-2.47217 1.57079 0.66943" xyz="0.09400 -0.00000 -0.06000"></origin>
+    <parent link="link_5_1"></parent>
+    <child link="link_6_1"></child>
+    <axis xyz="0.00000 0.00000 -1.00000"></axis>
+  </joint>
+  <link name="Base_link_1">
+    <collision name="Base_link_1_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/Base_link_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="1.01751" ixy="0.00544" ixz="-0.04202" iyy="1.72965" iyz="-0.00138" izz="2.23165"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <mass value="123.36589"></mass>
+    </inertial>
+    <visual name="Base_link_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/Base_link_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_1_1">
+    <collision name="link_1_1_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_1_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="1.92441" ixy="0.14906" ixz="0.82622" iyy="2.63030" iyz="-0.19394" izz="2.31233"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.01927 -0.00574 -0.11935"></origin>
+      <mass value="103.70972"></mass>
+    </inertial>
+    <visual name="link_1_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_1_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_2_1">
+    <collision name="link_2_1_collision">
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_2_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="2.37725" ixy="-0.00954" ixz="-0.01871" iyy="0.12568" iyz="-0.07590" izz="2.40240"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.02322 -0.27707 -0.06592"></origin>
+      <mass value="43.73544"></mass>
+    </inertial>
+    <visual name="link_2_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_2_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_3_1">
+    <collision name="link_3_1_collision">
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_3_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="1.12512" ixy="-0.44469" ixz="-0.16050" iyy="0.96144" iyz="-0.21737" izz="1.25590"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.11754 0.12558 -0.01929"></origin>
+      <mass value="77.84445"></mass>
+    </inertial>
+    <visual name="link_3_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_3_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_4_1">
+    <collision name="link_4_1_collision">
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_4_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.43541" ixy="0.00246" ixz="0.00988" iyy="0.52233" iyz="0.02243" izz="0.15278"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00360 -0.02280 -0.15481"></origin>
+      <mass value="30.91567"></mass>
+    </inertial>
+    <visual name="link_4_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_4_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_5_1">
+    <collision name="link_5_1_collision">
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_5_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.01997" ixy="-0.00009" ixz="0.00054" iyy="0.02478" iyz="-0.00021" izz="0.01993"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.04093 -0.00029 -0.05792"></origin>
+      <mass value="7.84835"></mass>
+    </inertial>
+    <visual name="link_5_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_5_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_6_1">
+    <collision name="link_6_1_collision">
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_6_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00002" ixy="0.00000" ixz="0.00000" iyy="0.00002" iyz="0.00000" izz="0.00004"></inertia>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00036 -0.00299"></origin>
+      <mass value="0.04507"></mass>
+    </inertial>
+    <visual name="link_6_1_visual">
+      <material name="link_2_1-material"></material>
+      <origin rpy="0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 -0.00000"></origin>
+      <geometry>
+        <mesh filename="../meshes/dae/link_6_1.dae" scale="1.00000 1.00000 1.00000"></mesh>
+      </geometry>
+    </visual>
+  </link>
+  <material name="link_2_1-material">
+    <color rgba="0.00000 0.00000 1.00000 1.00000"></color>
+  </material>
+</robot>
