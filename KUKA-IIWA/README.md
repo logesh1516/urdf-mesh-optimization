@@ -38,7 +38,7 @@ They were optimized through:
 ---
 
 # Mesh Size Comparison
-
+![KUKA-IIWA](../Images/kuka_iiwa.png)
 ## Unoptimized Meshes (CAD Export)
 
 

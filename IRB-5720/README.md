@@ -37,7 +37,7 @@ They were optimized through:
 ---
 
 # Mesh Size Comparison
-
+![IRB-5720](../Images/irb5720.png)
 ## Unoptimized Meshes (CAD Export)
 
 

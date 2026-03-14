@@ -118,7 +118,11 @@ Launch a robot model in RViz:
 
 ```bash
 ros2 launch ar1440_description display.launch.py
+ros2 launch hc10_description display.launch.py
+ros2 launch kuka_iiwa_description display.launch.py
+ros2 launch irb_description display.launch.py
 ```
+
 
 The launch file starts:
 
