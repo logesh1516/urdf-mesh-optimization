@@ -22,6 +22,22 @@ tools such as:
 
 ---
 
+## 📸 Gallery
+
+<div align="center">
+
+| AR1440 | HC10DTP |
+|--------|---------|
+| ![AR1440](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/ar1440.png) | ![HC10DTP](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/hc10dtp.png) |
+
+| IRB5720 | KUKA IIWA |
+|---------|-----------|
+| ![IRB5720](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/irb5720.png) | ![KUKA IIWA](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/kuka_iiwa.png) |
+
+</div>
+
+---
+
 ## Robots Included
 
 | Robot      | Manufacturer | DOF | Source CAD                         |
@@ -153,20 +169,7 @@ The optimized models can be used for:
 - simulation
 - robotics research pipelines
 
----
-## 📸 Gallery
 
-<div align="center">
-
-| AR1440 | HC10DTP |
-|--------|---------|
-| ![AR1440](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/ar1440.png) | ![HC10DTP](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/hc10dtp.png) |
-
-| IRB5720 | KUKA IIWA |
-|---------|-----------|
-| ![IRB5720](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/irb5720.png) | ![KUKA IIWA](https://raw.githubusercontent.com/logesh1516/urdf-mesh-optimization/main/Images/kuka_iiwa.png) |
-
-</div>
 
 ---
 
